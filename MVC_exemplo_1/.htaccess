@@ -1,0 +1,6 @@
+#arquivo htacess
+
+RewriteEngine On  
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ /MVC_exemplo_1/index.php?pag=$1 #acessa o diretório e define a variável 'pag' = 1
