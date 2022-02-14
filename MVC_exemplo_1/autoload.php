@@ -15,5 +15,3 @@ spl_autoload_register(function($nome_arquivo) //a função spl é realizada semp
         require 'Models/'.$nome_arquivo.'.php';
     }
 });
-
-?>

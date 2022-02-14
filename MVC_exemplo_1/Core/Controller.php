@@ -17,8 +17,8 @@ Class Controller {
 
     public function carregarViewNoTemplate($nomeView,$dadosModel = array())
     {
-        extract($dadosModel);
-        require 'Views/'.$nomeView.'.php';
+        extract($dadosModel); //explicação do extract abaixo 
+        require 'Views/'.$nomeView.'.php'; //é necessário fazer o require pois as views não são classes logo não pode ser vista pelo spl_autoload
     }
 
 }

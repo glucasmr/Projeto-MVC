@@ -69,4 +69,3 @@ Class Core{
         call_user_func_array(array($c,$metodo),$parametros); //acessa o determinado controller e executa o $metodo (podem ser diferentes metodos, então é preciso usar call_user_func_array )
     }
 }
-?>
