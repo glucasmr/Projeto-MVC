@@ -23,6 +23,8 @@ Class Core{
 
     public function run()
     {
+        $parametros = array();
+
         if(isset($_GET['pag']))  //usa o método GET para pegar o endereço que esta na url do htacess 
         {
             $url= $_GET['pag'];

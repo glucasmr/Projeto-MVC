@@ -1,6 +1,6 @@
 <?php
 
-Class homeController extends Controller(){ //Outras controllers podem ter método index, mas a homeController deve obrigatoriamente ter o método index 
+Class homeController extends Controller{ //Outras controllers podem ter método index, mas a homeController deve obrigatoriamente ter o método index 
 
     public function index()
     {
@@ -8,7 +8,7 @@ Class homeController extends Controller(){ //Outras controllers podem ter métod
         //2) chamar uma view
         //3) fazer a junção de backe nd com front end usando o template
     
-        $this->carregarTemplate('home',$dados);
+        $this->carregarTemplate('home');
     }
 
 

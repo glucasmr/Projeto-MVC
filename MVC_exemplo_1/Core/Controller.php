@@ -12,13 +12,13 @@ Class Controller {
     public function carregarTemplate($nomeView,$dadosModel = array()) //$dadosModel é atribuído um array, ou seja, não é obrigatório passar um parâmetro para este método
     {
         $this->dados = $dadosModel;
-        require 'Views/template.php';
+        require 'Views/template.php'; //é necessário fazer o require pois as views não são classes logo não pode ser vista pelo spl_autoload
     }
 
     public function carregarViewNoTemplate($nomeView,$dadosModel = array())
     {
         extract($dadosModel); //explicação do extract abaixo 
-        require 'Views/'.$nomeView.'.php'; //é necessário fazer o require pois as views não são classes logo não pode ser vista pelo spl_autoload
+        require 'Views/'.$nomeView.'.php'; 
     }
 
 }
