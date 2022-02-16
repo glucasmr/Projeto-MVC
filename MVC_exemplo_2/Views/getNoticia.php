@@ -1,0 +1,1 @@
+Está é uma segunda página relacionada a notícias dentro da mesma controller!
