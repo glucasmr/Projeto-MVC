@@ -1,0 +1,19 @@
+CREATE TABLE aula5_mvc;
+USE aula5_mvc;
+CREATE TABLE NOTICIAS (
+	id_noticia int PRIMARY KEY AUTO_INCREMENT,
+    titulo varchar(100),
+    nome_imagem varchar(50),
+    texto varchar(5000)
+);
+
+INSERT INTO noticias (titulo,nome_imagem,texto)
+VALUES ('noticia 1', 'img1.jpg','Este é o texto da notícia 1.');
+
+
+INSERT INTO noticias (titulo,nome_imagem,texto)
+VALUES ('noticia 2', 'img1.jpg','Este é o texto da notícia 2.');
+
+
+INSERT INTO noticias (titulo,nome_imagem,texto)
+VALUES ('noticia 3', 'img3.jpg','Este é o texto da notícia 3.');

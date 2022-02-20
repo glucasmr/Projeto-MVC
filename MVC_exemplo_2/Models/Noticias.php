@@ -13,7 +13,10 @@ Class Noticias{
 
     public function getNoticias()
     {
-        
+       $dados = array();
+       $cmd = $this->con->query('SELECT id_noticia,titulo,nome_imagem, texto FROM NOTICIAS'); //como não existe placeholder, não é necessário usar o método prepare e execute. Utiliza-se o query que realiza ambas as funções
+       $dados = $cmd -> fetchall(PDO::FETCH_ASSOC);
+       return $dados;
     }
 
 }

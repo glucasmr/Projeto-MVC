@@ -7,13 +7,17 @@ Class noticiasController extends Controller{ //Outras controllers podem ter mét
     public function index()
     {
         //1) chamar um model (não é obrigatório pois nem toda página vai buscar info no banco de dados)
+        $n = new Noticias();
+        $dados = $n ->getNoticias();
+        
+        
         //2) chamar uma view
         //3) fazer a junção de back end com front end usando o template
         
         $dados['nome'] = 'Gleison'; //exemplo de dados que podem ser extraídos do banco para serem exibidos na view
         $dados['idade'] = 22;
 
-        $this->carregarTemplate('noticias',$dados);
+        $this->carregarTemplate('noticias',array());
     }
 
     public function getNoticia() //uma segunda pagina no mesmo controller, que utilizando dados do model, exibi uma noticia

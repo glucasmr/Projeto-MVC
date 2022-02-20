@@ -9,9 +9,10 @@ Class Controller {
         $this->dados = array();
     }
 
-    public function carregarTemplate($nomeView,$dadosModel = array()) //$dadosModel é atribuído um array, ou seja, não é obrigatório passar um parâmetro para este método
+    public function carregarTemplate($nomeView,$dadosModel = array(), $dados2=array()) //$dadosModel é atribuído um array, ou seja, não é obrigatório passar um parâmetro para este método
     {
         $this->dados = $dadosModel;
+        $this->dados2 = $dados2
         require 'Views/template.php'; //é necessário fazer o require pois as views não são classes logo não pode ser vista pelo spl_autoload
     }
 
