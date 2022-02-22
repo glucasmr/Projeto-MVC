@@ -3,6 +3,7 @@
 Class Controller {
     
     public $dados;
+    public $dados2;
     
     public function __construct()
     {
@@ -12,7 +13,7 @@ Class Controller {
     public function carregarTemplate($nomeView,$dadosModel = array(), $dados2=array()) //$dadosModel é atribuído um array, ou seja, não é obrigatório passar um parâmetro para este método
     {
         $this->dados = $dadosModel;
-        $this->dados2 = $dados2
+        $this->dados2 = $dados2;
         require 'Views/template.php'; //é necessário fazer o require pois as views não são classes logo não pode ser vista pelo spl_autoload
     }
 

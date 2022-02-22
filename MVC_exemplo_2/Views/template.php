@@ -3,6 +3,7 @@
 <html>
     <head>
         <title></title>
+        <link rel="stylesheet" type="text/css" href="formatação/estilo.css">
     </head>
     <body>
         <!-----------CABEÇALHO----------->
