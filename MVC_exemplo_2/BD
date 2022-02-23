@@ -1,4 +1,4 @@
-CREATE TABLE aula5_mvc;
+CREATE DATABASE aula5_mvc;
 USE aula5_mvc;
 CREATE TABLE NOTICIAS (
 	id_noticia int PRIMARY KEY AUTO_INCREMENT,
@@ -12,7 +12,7 @@ VALUES ('noticia 1', 'img1.jpg','Este é o texto da notícia 1.');
 
 
 INSERT INTO noticias (titulo,nome_imagem,texto)
-VALUES ('noticia 2', 'img1.jpg','Este é o texto da notícia 2.');
+VALUES ('noticia 2', 'img2.jpg','Este é o texto da notícia 2.');
 
 
 INSERT INTO noticias (titulo,nome_imagem,texto)
@@ -20,7 +20,7 @@ VALUES ('noticia 3', 'img3.jpg','Este é o texto da notícia 3.');
 
 --Tabela que diz se uma noticia é do tipo entretenimento ou futebol
 
--- Cada notícia tem 1 tipo, e cada tipo pode ter N noticias. Cardinalidade 1-N
+-- Cada notícia tem 1 tipo, e cada tipo pode ter N noticias. Cardinalidade 1-N, logo a chave estrangeira fica do lado de noticias
 
 CREATE TABLE tipos_noticias(
     id_tipo INT PRIMARY KEY AUTO_INCREMENT,
@@ -29,3 +29,5 @@ CREATE TABLE tipos_noticias(
 
 ALTER TABLE noticias ADD COLUMN fk_id_tipo_noticia int;
 ALTER TABLE noticias ADD FOREIGN KEY (fk_id_tipo_noticia) REFERENCES tipos_noticias(id_tipo);
+INSERT INTO tipos_noticias (descricao) VALUES ('entretenimento'); --adiciona um tipo de notícia
+INSERT INTO tipos_noticias (descricao) VALUES ('futebol');

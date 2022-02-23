@@ -7,7 +7,7 @@ Class noticiasController extends Controller{ //Outras controllers podem ter mét
     public function index()
     {
         //1) chamar um model (não é obrigatório pois nem toda página vai buscar info no banco de dados)
-        $n = new Noticias();
+        $n = new Noticias(); //instancia o model criado
         $dados = $n ->getNoticias();
         
         //2) chamar uma view

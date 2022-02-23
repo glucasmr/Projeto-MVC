@@ -14,7 +14,7 @@ Class Noticias{
     public function getNoticias()
     {
        $dados = array();// cria dados como um array vazio 
-       $cmd = $this->con->query('SELECT n.id_noticia
+       $cmd = $this->con->query('SELECT n.id_noticia --faz a busca dos dados no BD
                                       , n.titulo
                                       , n.nome_imagem
                                       , n.texto
